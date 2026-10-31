@@ -72,6 +72,7 @@ h1 span { box-shadow: inset 0 -0.22em 0 var(--sun); }
 .intro-text { display: grid; gap: 20px; min-width: 0; }
 .portrait {
   width: clamp(160px, 24vw, 240px);
+  height: auto;
   aspect-ratio: 1;
   max-width: 100%;
   border-radius: 50%;
@@ -215,6 +216,12 @@ section.ep { padding-block: 44px; border-top: 1px solid var(--line); }
 @media (max-width: 720px) {
   .projects, .duo { grid-template-columns: minmax(0, 1fr); }
   .timeline li { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-block: 32px 24px; gap: 22px; }
+  section.ep { padding-block: 32px; }
+  .ep-head { margin-bottom: 18px; }
+  .proj, .card { padding: 18px; }
+  .contact { padding-block: 40px 48px; }
+  .contact .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
