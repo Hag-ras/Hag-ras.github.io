@@ -83,7 +83,9 @@ h1 span { box-shadow: inset 0 -0.22em 0 var(--sun); }
 }
 @media (max-width: 720px) {
   .intro { grid-template-columns: minmax(0, 1fr); }
-  .portrait { order: -1; width: 128px; }
+  .portrait { order: -1; width: 128px; justify-self: center; }
+  h1 { text-align: center; }
+  .status { justify-content: center; }
 }
 .lede {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
