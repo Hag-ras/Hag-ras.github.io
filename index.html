@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Mohamed Ashraf Hagras, backend-focused full stack developer in Cairo.">
+<meta name="description" content="Mohamed Ashraf Hagras, software engineer focused on backend and full stack development, Cairo.">
 <title>Mohamed Hagras</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,6 +176,7 @@ section.ep { padding-block: 44px; border-top: 1px solid var(--line); }
 .badge { font: 500 .72rem/1 var(--mono); padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
 .badge.go { color: var(--ink); }
 .proj p { margin: 0; color: var(--muted); }
+.proj code { font: 400 .9em var(--mono); color: var(--ink); }
 .proj ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
 .chips span { font: 400 .76rem/1 var(--mono); padding: 6px 8px; border-radius: 6px; background: var(--bg); color: var(--ink); }
@@ -245,7 +246,7 @@ img { max-width: 100%; }
       <div class="intro-text">
       <h1>Mohamed<br>Ashraf <span>Hagras</span></h1>
       <p class="lede">
-        <strong>Backend-focused full stack developer</strong> and final-year engineering student at Cairo University.
+        <strong>Software engineer</strong> focused on backend and full stack development, based in Cairo.
         I build REST APIs and production web apps with FastAPI, NestJS, Express and Spring Boot on PostgreSQL and MongoDB,
         with React and Next.js on the front. Right now I'm building infrastructure for deep learning research.
       </p>
@@ -255,6 +256,28 @@ img { max-width: 100%; }
 
       <div class="log" id="log" aria-label="Page sections"></div>
     </header>
+
+    <section class="ep" id="open-source">
+      <div class="ep-head">
+        <span class="verb">GET</span>
+        <h2>Open source</h2>
+        <span class="path">/open-source</span>
+      </div>
+
+      <div class="projects">
+        <article class="proj feature">
+          <header><h3><a class="stretch" href="https://github.com/redis/node-redis/pull/3621" target="_blank" rel="noopener">node-redis: official Redis Node.js client</a></h3><span class="badge go">merged · 11/2026</span></header>
+          <p>Passing <code>undefined</code> as an expiration value crashed some commands, even though the older syntax handled it.</p>
+          <ul>
+            <li>Fixed the crash in the SET, HSETEX, HGETEX and MSETEX command parsers</li>
+            <li>Traced the cause across the client's command parsers and opened the issue</li>
+            <li>Refined the tests through maintainer review; merged into master</li>
+          </ul>
+          <div class="chips"><span>TypeScript</span><span>Node.js</span><span>Redis</span></div>
+          <span class="go-link">Pull request · github.com/redis/node-redis/pull/3621 ↗</span>
+        </article>
+      </div>
+    </section>
 
     <section class="ep" id="projects">
       <div class="ep-head">
@@ -370,8 +393,8 @@ img { max-width: 100%; }
       </div>
       <div class="duo">
         <div class="card">
-          <h3>B.Sc. Engineering</h3>
-          <p>Cairo University, Giza · 09/2022 – expected 07/2027</p>
+          <h3>B.Sc. Systems &amp; Biomedical Engineering</h3>
+          <p>Cairo University · 09/2022 – expected 07/2027</p>
           <p>Grade: Very Good</p>
         </div>
         <div class="card">
@@ -416,6 +439,7 @@ document.getElementById("copy2").addEventListener("click", e => copyEmail(e.curr
 (() => {
   const log = document.getElementById("log");
   const routes = [
+    ["GET", "/open-source", 200, "#open-source"],
     ["GET", "/projects", 200, "#projects"],
     ["GET", "/experience", 200, "#experience"],
     ["GET", "/skills", 200, "#stack"],
